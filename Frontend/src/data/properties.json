@@ -1,0 +1,36 @@
+[{
+  "id":1,
+  "type" : "Appartment",
+  "name": "Birla Appartment",
+  "price":12000
+},
+{
+  "id":2,
+  "type" : "Bunglow",
+  "name": "Aditya Bunglow",
+  "price":15000
+},
+{
+  "id":3,
+  "type" : "Ternamant",
+  "name": "Jay House",
+  "price":17000
+},
+{
+  "id":4,
+  "type" : "Duplex",
+  "name": "Hari om Duplex",
+  "price":18000
+},
+{
+  "id":5,
+  "type" : "Flat",
+  "name": "Parth House",
+  "price":12000
+},
+{
+  "id":6,
+  "type" : "House",
+  "name": "Nutan Club House",
+  "price":9000
+}]
