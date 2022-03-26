@@ -1,36 +1,48 @@
 [{
   "id":1,
+  "sellRent":1,
   "type" : "Appartment",
   "name": "Birla Appartment",
-  "price":12000
+  "price":12000,
+  "image":"prop-1"
 },
 {
   "id":2,
+  "sellRent":2,
   "type" : "Bunglow",
   "name": "Aditya Bunglow",
-  "price":15000
+  "price":15000,
+  "image":"prop-2"
 },
 {
   "id":3,
+  "sellRent":1,
   "type" : "Ternamant",
   "name": "Jay House",
-  "price":17000
+  "price":17000,
+  "image":"prop-3"
 },
 {
   "id":4,
+  "sellRent":2,
   "type" : "Duplex",
   "name": "Hari om Duplex",
-  "price":18000
+  "price":18000,
+  "image":"prop-4"
 },
 {
   "id":5,
+  "sellRent":1,
   "type" : "Flat",
   "name": "Parth House",
-  "price":12000
+  "price":12000,
+  "image":"prop-5"
 },
 {
   "id":6,
+  "sellRent":2,
   "type" : "House",
-  "name": "Nutan Club House",
-  "price":9000
+  "name": "Nutan Club",
+  "price":9000,
+  "image":"prop-3"
 }]
