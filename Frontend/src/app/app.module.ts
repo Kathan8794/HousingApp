@@ -7,7 +7,12 @@ import { ProprtyListComponent } from './property/proprty-list/proprty-list.compo
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HousingService } from './sevices/housing.service';
 import{CardComponent} from './property/card/card.component';
+import{FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { PropertyDetailComponent } from './property/property-detail/property-detail.component';
+import { AddPropertyComponent } from './property/add-property/add-property.component';
+import { UserLoginComponent } from './user/user-login/user-login.component';
+import { UserRegisterComponent } from './user/user-register/user-register.component';
+import { UsersService } from './sevices/users.service';
 
 @NgModule({
   declarations: [
@@ -15,14 +20,19 @@ import { PropertyDetailComponent } from './property/property-detail/property-det
     ProprtyListComponent,
     NavBarComponent,
     CardComponent,
-    PropertyDetailComponent
+    PropertyDetailComponent,
+    AddPropertyComponent,
+    UserLoginComponent,
+    UserRegisterComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [HousingService],
+  providers: [HousingService,UsersService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
