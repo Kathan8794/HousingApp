@@ -49,7 +49,7 @@
       </ul>
       <div>
         <ul class="nav navbar-nav">
-          <li class="nav-item">
+          <li *ngIf="!loggedIn()" class="nav-item">
             <a
               class="nav-link"
               routerLink="/user-register"
@@ -58,7 +58,7 @@
               Register
             </a>
           </li>
-          <li class="nav-item">
+          <li *ngIf="!loggedIn()" class="nav-item">
             <a
               class="nav-link"
               routerLink="/user-login"
@@ -67,6 +67,29 @@
               Login
             </a>
           </li>
+
+          <div *ngIf="loggedIn()" style="margin-right: 80px;" class="dropdown mr-5 btn-group" dropdown>
+            <a id="button-disabled-item" (click)="false" dropdownToggle type="button" class="btn dropdown-toggle text-light"
+                    aria-controls="dropdown-disabled-item">
+                    Welcome {{loggedinUser}}<span class="caret"></span>
+            </a>
+            <ul id="dropdown-disabled-item" *dropdownMenu class="dropdown-menu"
+                role="menu" aria-labelledby="button-disabled-item">
+              <li role="menuitem"><a class="dropdown-item" href="#">
+                <i class="fas fa-tachometer-alt"></i> view Dashboard</a></li>
+              <li role="menuitem"><a class="dropdown-item" href="#">
+                <i class="fas fa-user-circle"></i>My profile</a>
+              </li>
+              <li role="menuitem"><a class="dropdown-item" href="#">
+                <i class="fas fa-key"></i>change password</a>
+              </li>
+              <li (click)="logout()" *ngIf ="loggedIn()" role="menuitem"><a class="dropdown-item" href="#">
+                <i class="fas fa-sign-out-alt"></i>Logout</a>
+              </li>
+            </ul>
+          </div>
+
+
         </ul>
       </div>
     </div>
