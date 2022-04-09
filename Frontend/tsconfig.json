@@ -6,6 +6,7 @@
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "noImplicitAny": false,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
@@ -19,6 +20,10 @@
     "strictPropertyInitialization": false,
     "target": "es2017",
     "module": "es2020",
+    "typeRoots": [
+      "node_modelues/@types",
+      "src/alertifytype.d.ts"
+    ],
     "lib": [
       "es2020",
       "dom"

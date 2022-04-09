@@ -13,6 +13,7 @@ import { AddPropertyComponent } from './property/add-property/add-property.compo
 import { UserLoginComponent } from './user/user-login/user-login.component';
 import { UserRegisterComponent } from './user/user-register/user-register.component';
 import { UsersService } from './sevices/users.service';
+import { AlertifyService } from './sevices/alertify.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { UsersService } from './sevices/users.service';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [HousingService,UsersService],
+  providers: [HousingService,UsersService,AlertifyService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

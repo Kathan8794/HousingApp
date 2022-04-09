@@ -9,6 +9,7 @@ import {
 } from '@angular/forms';
 import { PasswordValidator } from 'src/app/errorState';
 import { User } from 'src/app/model/user';
+import { AlertifyService } from 'src/app/sevices/alertify.service';
 import { UsersService } from 'src/app/sevices/users.service';
 
 
@@ -23,7 +24,7 @@ export class UserRegisterComponent implements OnInit {
   user: User;
   userSubmitted : boolean;
 
-  constructor(private fb: FormBuilder,private userService : UsersService) {}
+  constructor(private fb: FormBuilder,private userService : UsersService,private alertyfy : AlertifyService) {}
 
   ngOnInit() {
     this.registraionForm = this.fb.group(
@@ -69,10 +70,17 @@ export class UserRegisterComponent implements OnInit {
       this.userService.addUser(this.userData());
       this.registraionForm.reset();
       this.userSubmitted = false;
+      this.alertyfy.success("success");
+    }else{
+      this.alertyfy.error("error");
     }
 
   }
 
+  onCancel(){
+    this.userSubmitted = false;
+    this.registraionForm.reset;
+  }
   userData():User{
     return this.user ={
       userName : this.userName.value,
